@@ -1,5 +1,5 @@
 # Transform Utils
-Common utils functionalities that are used across repos (transformations, etc.)
+Common SO3 and SE3 functionalities that can be used across repos.
 
 Originally developed at Samsung AI Centre -- Montreal, and part of the [tactile IL monorepo](https://github.com/SAIC-MONTREAL/tactile-il).
 
