@@ -48,6 +48,8 @@ class PoseTransformer(PoseStamped):
             return self.get_array_axisa()
         elif rotation_representation == "rvec":
             return self.get_array_rvec()
+        elif rotation_representation == 'mat':
+            return self.get_matrix()
 
     def get_array_euler(self, axes='rxyz'):
         """
@@ -150,6 +152,8 @@ class PoseTransformer(PoseStamped):
             self.set_array_axisa(pose)
         elif rotation_representation == "rvec":
             self.set_array_rvec(pose)
+        elif rotation_representation == 'mat':
+            self.set_array_mat(pose)
 
     def set_array_euler(self, pose, axes='rxyz'):
         self.set_pos(pose[:3])
@@ -166,6 +170,9 @@ class PoseTransformer(PoseStamped):
     def set_array_rvec(self, pose):
         self.set_pos(pose[:3])
         self.set_rvec(pose[3:])
+
+    def set_array_mat(self, mat):
+        self.pose = matrix2pose(mat).pose
 
     def set_pos(self, pos):
         """
