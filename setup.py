@@ -11,7 +11,7 @@ setup(
     # py_modules=['transform_utils'],
     packages=find_packages(),
     install_requires=[
-        'numpy',
+        'numpy<2.0',
         'transformations>=2021.6.6',
         'numpy-quaternion',
         'std-msgs',
